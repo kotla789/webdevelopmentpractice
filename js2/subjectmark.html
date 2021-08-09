@@ -1,0 +1,118 @@
+<html>
+	<head>
+	<title>subject marks</title>
+		<script>
+		function display()
+		{
+			var telugu=Number(document.getElementById("t1").value);
+			var hindi=Number(document.getElementById("h1").value);
+			var english=Number(document.getElementById("e1").value);
+			var maths=Number(document.getElementById("m1").value);
+			var science=Number(document.getElementById("s1").value);
+			var social=Number(document.getElementById("s2").value);	
+			if(telugu=="")
+			{
+				document.getElementById("teluguerror").innerHTML="please enter a telugu marks";
+			}
+			if(hindi=="")
+			{
+				document.getElementById("hindierror").innerHTML="please enter a hindi marks";
+			}
+			if(telugu=="")
+			{
+				document.getElementById("teluguerror").innerHTML="please enter a telugu marks";
+			}
+			if(english=="")
+			{
+				document.getElementById("englisherror").innerHTML="please enter a english marks";
+			}
+			if(maths=="")
+			{
+				document.getElementById("mathserror").innerHTML="please enter a maths marks";
+			}
+			if(science=="")
+			{
+				document.getElementById("scienceerror").innerHTML="please enter a science marks";
+			}
+			if(social=="")
+			{
+				document.getElementById("socialerror").innerHTML="please enter a social marks";
+			}
+			var total=(telugu+hindi+english+maths+science+social);
+			document.getElementById("total").value=total;
+		var points;
+		var grade;
+		var precentage = total/6;
+
+		if(total>550 && total<=600)
+		{	
+		 points=9.8;
+		 grade="A";
+		} 
+		else if(total>=500 && total<550)
+		{
+		 points=9.5;
+		 grade="B";
+		}
+		else if(total>=450 && total<500)
+		{
+		 points=9.0;
+		 grade="C";
+		}
+		else if(total>=350&& total<500)
+		{
+		points=8.5;
+		grade="D";
+		}
+		document.getElementById("percentage").value=percentage;
+		document.getElementById("points").value=points;
+		document.getElementById("grade").value=grade;
+
+		}
+	</script>
+	</head>
+	<body>
+		<form name="f1"  method="post" action="" autocomplete="off" enctype="multipart/form-data">
+		<table>
+		<tr>
+			<td>telugu</td>
+			<td>
+				<input type="text" name="tel" id="t1" placeholder="enter a telugu marks" value="" /><span id="teluguerror">
+				</span><br><br>
+			</td>
+		</tr>
+<tr>
+<td>hindi</td>
+<td><input type="text" name="hindi" id="h1" placeholder="enter a hindi marks" value="" /><span id="hindierror"></span><br><br></td>
+</tr>
+<tr>
+<td>english</td>
+<td><input type="text" name="eng" id="e1" placeholder="enter a english marks" value="" /><span id="englisherror"></span><br><br></td>
+</tr>
+<tr>
+<td>maths</td>
+<td><input type="text" name="maths" id="m1" placeholder="enter a maths marks" value="" /><span id="mathserror"></span><br><br></td>
+</tr>
+<tr>
+<td>science</td>
+<td><input type="text" name="science" id="s1" placeholder="enter a science marks" value="" /><span id="scienceerror"></span><br><br></td>
+</tr>
+<tr>
+<td>social</td>
+<td><input type="text" name="soc" id="s2" placeholder="enter a social marks" value="" /><span id="socialerror"></span><br><br></td>
+</tr>
+<tr>
+<td><input type="text" name="totalmarks" id="total" placeholder="total marks" value="" /><br><br></td>
+<td><input type="text" name="percentage" id="percentage" placeholder="percentage" value="" /><br><br></td>
+<td><input type="text" name="points" id="points" placeholder="points" value=""/><br><br></td>
+<td><input type="text" name="grade" id="grade"  placeholder="grade" value="" /><br><br></td>
+</tr>
+<tr>
+<td><input type="button" name="submit" value="total" onclick="display();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><input type="button" name="submit" value="%"  onclick="display();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><input type="button" name="submit" value="points"  onclick="display();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><input type="button" name="submit" value="grade"  onclick="display();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</table>
+</form>
+</body>
+</html>

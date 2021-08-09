@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>break</title>
+<script>
+function getname() {
+var name="sai krishna";
+for(i=0; i<name.length; i++)
+{
+if(i==2)
+{
+	continue;//break
+}
+document.write(name[i]+"<br>");
+}
+}
+</script>
+</head>
+<body>
+<h2>javascript break</h2>
+<p id="demo"></p>
+<button type="button" onclick="getname();">print name</button>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>functions</title>
+<script>
+function get_details();
+{
+	var  User firstname=document.getElementById("fname").value;
+	var User secondname=document.getElementById("lname").value;
+	var document.getElementById("email").value;
+	var  document.getElementById("gender").value;
+	var document.getElementById("submit").value;
+	
+	
+}
+</script>
+</head>
+<body>
+
+	<form>
+		<table align="center">
+		<tr>
+		<td>User firstName</td>
+		<td><input type="text" name="fname" id="fname" placeholder="enter a first name " title="please enter a first name" value="" reuired="required" /></br></br></td>
+		</tr>
+		<tr>
+		<td>User Second Name</td>
+		<td><input type="text" name="lname" id="lname" placeholder="please enter a second name " title="please enter a second name" value="" /></br></br></td>
+		</tr>
+		<tr>
+		<td>Email</td>
+		<td><input type="email" name="emai" id="email" placeholder="please enter an email address " value="" /></br></br></td>
+		</tr>
+		<tr>
+		<td>Gender</td>
+		<td><input type="radio" name="gender" id="gender" placeholder="gender " value="male">male
+		 <input type="radio" name="gender" id="gender" placeholder=" " value="female" />female</br></br></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="submit" id="submit" placeholder=" " value="submit" onclick="get_details()"/></br></td>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>durgajs1</title>
+<script>
+function validate()
+{
+var uid=f1.t1.value;
+var pass=f1.t2.value;
+var cpass=f1.t3.value;
+var email=f1.t4.value;
+var atpos=email.indexOf("@");
+var dotpos=email.lastIndexOf(".");
+var add=f1.t5.value;
+var city=f1.t6.selectIedIndex;
+var mno=f1.t7.value;
+
+if(uid.length==0 || uid==" ")
+{
+alert("enter a user name");
+return false;
+}
+else if(pass.length==0 || pass==" ")
+{
+alert("enter a password")
+return false;
+}
+else if(cpass.length==0 || cpass==" ")
+{
+alert("enter a confirm password")
+return false;
+}
+else if(pass!=cpass)
+{
+alert("password doesnot match")
+return false;
+}
+else if(email.length==0 || email==" ")
+{
+alert("please enter a email id")
+return false;
+}
+else if(atpos<1 || (dotpos-atpos)<=2)
+{
+alert("invalid email id");
+return false;
+}
+else if(add.length==0 || add==" ")
+{
+alert("enter a address")
+return false;
+}
+else if(city==0)
+{
+alert(please select a city);
+return false;
+}
+else if(mno.length==0 || mno==" ")
+{
+alert("enter a valid mobile number")
+return false;
+}
+else
+{
+return true;
+}
+}
+</script>
+</head>
+<body>
+<form name="f1" onsubmit="return validate();" action="sucess.html">
+<table align="center">
+<tr>
+<td>customer name</td>
+<td><input type="text" name="t1" ></td>
+</tr>
+
+<tr>
+<td>password</td>
+<td><input type="password" name="t2" ></td>
+</tr>
+
+<tr>
+<td>confirm password</td>
+<td><input type="password" name="t3" ></td>
+</tr>
+
+<tr>
+<td>emai id</td>
+<td><input type="text" name="t4" ></td>
+</tr>
+
+
+<tr>
+<td>Address</td>
+<td><textarea name="t6" rows=5 cols=15></textarea></td>
+</tr>
+
+<tr>
+<td>city</td>
+<td><select name="t7" >
+<option>-----select----
+<option>hyderabad
+<option>vizag
+<option>kurnool
+<option>banglore
+</select></td>
+</tr>
+
+<tr>
+<td>mobile no</td>
+<td><input type="text" name="t8"></td>
+</tr>
+<tr>
+<td colspan=2 align="center"><input type="submit" name="b1" value="register">
+</tr>
+</table>
+</form>
+</body>
+</html>

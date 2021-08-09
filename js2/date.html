@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>date</title>
+<script>
+var date=new Date();
+document.write(date+"<br>");
+document.write(date.getDay()+"<br>");
+var day=["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+document.write(day[date.getDay()]+"<br>");
+document.write(date.getMonth()+"<br>");
+var month=["jan", "feb", "mar", "april", "may", "june", "july", "aug", "sep", "oct", "nov", "dec"];
+document.write(month[date.getMonth()]+"<br>");
+document.write(date.getDate()+"<br>");
+document.write("yesterday date is  "+(date.getDate()-1)+"<br>");
+document.write("day before yesterday date is  "+(date.getDate()-2)+"<br>");
+document.write("Next date is  "+(date.getDate()+1)+"<br>");
+document.write(date.getFullYear()+"<br>");(
+document.write("next year is "+(date.getFullYear()+1)+"<br>");
+document.write(date.getHours()+"<br>");
+document.write("previous hours "+(date.getHours()-1)+"<br>");
+document.write(date.getMinutes()+"<br>");
+document.write(date.getSeconds()+"<br>");
+document.write(date.getMilliseconds()+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

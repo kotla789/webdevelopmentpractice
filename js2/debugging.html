@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>debugging</title>
+<script>
+function getfunction()
+{
+var message, x;
+message=document.getElementById("p01");
+message.innerHTML=" ";
+x=document.getElementById("demo").value;
+try
+{
+if(x == " ")throw "empty";
+if(isNaN(x)) throw "not a number";
+x=Number(x);
+if(x<5)throw "too low"
+if(x>10)throw "too high";
+if(x>5 && x<10)throw "prefect";
+}
+catch(err) {
+message.innerHTML="input is "+err;
+}
+}
+
+</script>
+</head>
+<body>
+<p>please input a number between 5 and 10;<p>
+<input type="text" id="demo">
+<button type="button" onclick="getfunction();">Test Input</button>
+<p id="p01"></p>
+</body>
+</html>

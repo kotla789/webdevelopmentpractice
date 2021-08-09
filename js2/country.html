@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>functionimage</title>
+<script>
+function getimage(str)
+{
+	document.getElementById("color").style.backgroundColor = str;
+}
+</script>
+</head>
+<body>
+
+<select name="color1" id="c1" onchange="getimage(this.value);">
+
+<option value=""> .......select....</option>
+
+<option value="red">red</option>
+<option value="blue">blue</option>
+
+<option value="green">green</option>
+
+
+</select>
+<div id="color" style="width:200px; height:150px; border:2px solid red;">
+ 
+</div>
+</body>
+</html>

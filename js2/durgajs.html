@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>durgajs</title>
+<script>
+function total()
+{
+var ch=f1.courses.selectedIndex;
+if(ch==0)
+f1.tfee.value="";
+if(ch==1)
+f1.tfee.value="5000";
+if(ch==2)
+f1.tfee.value="3000";
+if(ch==3)
+f1.tfee.value="4000";
+if(ch==4)
+f1.tfee.value="2000";
+}
+function conc(i)
+{
+if(i==1)
+f1.cfee.value=400;
+if(i==2)
+f1.cfee.value=500;
+if(i==3)
+f1.cfee.value=600;
+if(i==4)
+f1.cfee.value=700;
+}
+function due()
+{
+var total=parseInt(f1.tfee.value);
+var dis=parseInt(f1.cfee.value);
+var paid=parseInt(f1.pfee.value);
+var due=total-(dis+paid);
+if(due>=0)
+f1.dfee.value=due;
+else
+{
+alert("invalid amount");
+}
+}
+</script>
+</head>
+<body>
+<form name="f1" >
+<table align=center>
+<tr>
+<td>course</td>
+<td><select name="courses" onchange="total();" >
+<option>-------select-----
+<option>html
+<option>css
+<option>javascript
+<option>angular
+</select></td>
+</tr>
+<tr>
+<td>Total fee</td>
+<td><input type="text" name="tfee" value="" readonly></td>
+</tr>
+<tr>
+<td>caste</td>
+<td><input type="radio" name="c1" onclick="conc(1);" >oc
+<input type="radio" name="c1" onclick="conc(2);" >bc
+<input type="radio" name="c1" onclick="conc(3);" >sc
+<input type="radio" name="c1" onclick="conc(4);">st</td>
+</tr>
+<tr>
+<td>concession fee</td>
+<td><input type="text" name="cfee"></td>
+</tr>
+<tr>
+<td>paid fee</td>
+<td><input type="text" name="pfee"></td>
+</tr>
+<tr>
+<td>due fee</td>
+<td><input type="text" name="dfee"></td>
+</tr>
+<tr>
+<td colspan=2 align="center">
+<input type="button" name="button" value="calucalte" onclick="due();"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>looping</title>
+<script>
+/*for(var i=1; i<=10; i++)
+{
+document.write(i+"<br>");
+}*/
+/*for(var i=10; i>=1; i--)
+{
+document.write(i+"<br>");
+}*/
+/*for(var i=2; i<=10; i=i+2)
+{
+document.write(i+"<br>");
+}*/
+/*for(var i=5; i<=50; i=i+5)
+{
+document.write(i+"<br>");
+}*/
+/*for(var i=1; i<=10; i++)
+{
+document.write("2 * "+i+" = "+(2*i)+"<br>");
+}*/
+/*for(var j=2; j<=20; j++)
+{
+	var table=j;
+	for(var i=1; i<=10; i++)
+	{
+		document.write(table" * "+i+" = "+table * i+"<br>");
+	}
+}*/
+for(var i=2; i<=20; i++)
+{	
+	for (var j=2; j<i; j++)
+	{
+		if(i % j ==0)
+		{
+			break;
+		}
+	}
+	if(i == j)
+	{
+		document.write(i+"<br>");
+	}
+}
+
+</script>
+<body>
+</body>
+</html>

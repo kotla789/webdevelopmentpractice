@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>javascript closures</title>
+<script>
+var add=(function() {
+var counter=0;
+return function () {counter+=1; return counter;}
+})();
+function myfunction() {
+document.getElementById("demo").innerHTML=add();
+}
+</script>
+</head>
+<body>
+<h2>javascript closures</h2>
+<p>counting with alocal variable</p>
+<p id="demo">0</p>
+<button type="button" onclick="myfunction();">count!</button>
+</body>
+</html>
